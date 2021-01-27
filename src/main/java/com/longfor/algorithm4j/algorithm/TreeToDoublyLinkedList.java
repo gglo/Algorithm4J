@@ -18,14 +18,14 @@ public class TreeToDoublyLinkedList {
         public Node() {
         }
 
-        public Node(int _val) {
-            val = _val;
+        public Node(int val) {
+            this.val = val;
         }
 
-        public Node(int _val, Node _left, Node _right) {
-            val = _val;
-            left = _left;
-            right = _right;
+        public Node(int val, Node left, Node right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
         }
     }
 
@@ -33,7 +33,7 @@ public class TreeToDoublyLinkedList {
     /**
      * 定义前驱结点和头节点
      */
-    private Node pre, head;
+    private static Node pre, head;
 
     /**
      * 将二叉搜索树转换为双向链表
@@ -42,8 +42,13 @@ public class TreeToDoublyLinkedList {
      * @return 双向链表
      */
     public static Node treeToDoublyList(Node root) {
-        Node recur = recur(root);
-        return recur;
+        if (root == null) {
+            return null;
+        }
+        recur(root);
+        head.left = pre;
+        pre.right = head;
+        return head;
     }
 
     /**
@@ -51,25 +56,22 @@ public class TreeToDoublyLinkedList {
      *
      * @param root
      */
-    private static Node recur(Node root) {
+    private static void recur(Node root) {
         if (root == null) {
-            return root;
+            return;
         }
         // 左边节点处理
-        Node pre = null;
-        if (root.left != null) {
-            pre = recur(root.left);
-        }
+        recur(root.left);
         // 将当前的前置节点置为pre
+        // 右边节点处理
+        if (pre != null) {
+            pre.right = root;
+        } else {
+            head = root;
+        }
         root.left = pre;
         pre = root;
-        // 右边节点处理
-        if (root.right != null) {
-            Node right = recur(root.right);
-            right.left = pre;
-            pre = right;
-        }
-        return pre;
+        recur(root.right);
     }
 
     public static void main(String[] args) {

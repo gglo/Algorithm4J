@@ -11,8 +11,8 @@ public class CQueue {
     private Stack<Integer> delete = null;
 
     public CQueue() {
-        append = new Stack<>();
-        delete = new Stack<>();
+        append = new Stack<Integer>();
+        delete = new Stack<Integer>();
     }
 
     /**
