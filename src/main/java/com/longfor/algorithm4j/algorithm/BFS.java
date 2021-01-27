@@ -26,8 +26,8 @@ public class BFS {
         if (root == null) {
             return new int[]{};
         }
-        ArrayList<Integer> arrayList = new ArrayList<>();
-        Queue<TreeNode> queue = new LinkedBlockingQueue<>();
+        ArrayList<Integer> arrayList = new ArrayList<Integer>();
+        Queue<TreeNode> queue = new LinkedBlockingQueue<TreeNode>();
         queue.add(root);
         while (!queue.isEmpty()) {
             TreeNode poll = queue.poll();
