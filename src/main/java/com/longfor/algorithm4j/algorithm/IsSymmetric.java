@@ -1,4 +1,4 @@
-package com.longfor.demo.algorithm;
+package com.longfor.algorithm4j.algorithm;
 
 /**
  * 判断一颗二叉树是不是对称的二叉树

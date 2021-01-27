@@ -1,4 +1,4 @@
-package com.longfor.demo.algorithm;
+package com.longfor.algorithm4j.algorithm;
 
 /**
  * 将二叉搜索树转换为双向链表

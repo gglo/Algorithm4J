@@ -1,4 +1,4 @@
-package com.longfor.demo.algorithm;
+package com.longfor.algorithm4j.algorithm;
 
 
 import java.util.ArrayList;

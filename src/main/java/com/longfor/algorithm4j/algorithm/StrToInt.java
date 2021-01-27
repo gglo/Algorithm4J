@@ -1,4 +1,4 @@
-//package com.longfor.demo.diagram;
+//package com.longfor.algorithm4j.diagram;
 //
 ///**
 // * 首先，该函数会根据需要丢弃无用的开头空格字符，直到寻找到第一个非空格的字符为止。

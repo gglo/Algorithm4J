@@ -1,4 +1,4 @@
-package com.longfor.demo.algorithm;
+package com.longfor.algorithm4j.algorithm;
 
 /**
  * 翻转链表

@@ -1,4 +1,4 @@
-package com.longfor.demo.algorithm;
+package com.longfor.dealgorithm4jmo.algorithm;
 
 /**
  * @author wanggang
