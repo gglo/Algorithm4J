@@ -7,8 +7,31 @@ package com.longfor.algorithm4j.algorithm;
  */
 public class IsBalanced {
 
+    /**
+     * 平衡二叉树的判断标准
+     *
+     * @param root 根节点
+     * @return 结果
+     */
     public boolean isBalanced(TreeNode root) {
-        return false;
+        if(root == null){
+            return true;
+        }
+       return  Math.abs(maxDeep(root.left) - maxDeep(root.right)) <= 1 && isBalanced(root.left) && isBalanced(root.right);
+    }
+
+
+    /**
+     * 获取每个节点的深度
+     *
+     * @param root 根节点
+     * @return 深度
+     */
+    private int maxDeep(TreeNode root) {
+        if (null == root) {
+            return 0;
+        }
+        return Math.max(maxDeep(root.left), maxDeep(root.right)) + 1;
     }
 
     /**
